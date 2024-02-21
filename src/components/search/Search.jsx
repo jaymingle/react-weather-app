@@ -6,6 +6,10 @@ const Search = ({onSearchChange}) => {
 
     const [search, setSearch] = useState(null)
 
+    const loadOptions = inputValue => {
+
+    }
+
     const fetchWeatherHandler = (searchData) => {
 
         setSearch(searchData)
@@ -21,6 +25,8 @@ const Search = ({onSearchChange}) => {
                 debounceTimeout={700}
                 value={search}
                 onChange={fetchWeatherHandler}
+                loadOptions={loadOptions}
+
             />
         </div>
     );
