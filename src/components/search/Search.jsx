@@ -3,12 +3,13 @@ import {AsyncPaginate} from "react-select-async-paginate";
 
 const Search = ({onSearchChange}) => {
 
+
     const [search, setSearch] = useState(null)
 
     const fetchWeatherHandler = (searchData) => {
+
         setSearch(searchData)
         onSearchChange(searchData)
-
 
     }
 
