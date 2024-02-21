@@ -8,7 +8,10 @@ const Search = ({onSearchChange}) => {
     const fetchWeatherHandler = (searchData) => {
         setSearch(searchData)
         onSearchChange(searchData)
+
+
     }
+
 
     return (
         <div>

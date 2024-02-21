@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="container">
-        <Search/>
+        <Search onSearchChange={handleSearchChanges}/>
     </div>
   )
 }
