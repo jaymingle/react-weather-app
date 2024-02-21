@@ -4,8 +4,8 @@ import Search from "./components/search/Search.jsx";
 function App() {
 
   return (
-    <div>
-        <Searchßßß/>
+    <div className="container">
+        <Search/>
     </div>
   )
 }
