@@ -4,64 +4,39 @@ import {GEO_API_URL, geoApiOptions} from "../../api.js";
 
 const Search = ({onSearchChange}) => {
 
+    const [search, setSearch] = useState(null);
 
-    const [search, setSearch] = useState(null)
-
-    const loadOptions = inputValue => {
-
-        // try {
-        //     const response = await fetch(GEO_API_URL, geoApiOptions);
-        //     const result = await response.text();
-        //     console.log(result);
-        // } catch (error) {
-        //     console.error(error);
-        // }
-        fetch(`${GEO_API_URL}?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
-            // .then(response => response.json())
-            // .then((response) => {
-            //     return {
-            //         options: response.data.map((city) => {
-            //             return {
-            //                 value: `${city.latitude} ${city.longitude}`,
-            //                 label: `${city.name}, ${city.countryCode}`,
-            //             }
-            //         })
-            //     }
-            // })
+    const loadOptions = (inputValue) => {
+        return fetch(
+            `${GEO_API_URL}/?minPopulation=1000000&namePrefix=${inputValue}`,
+            geoApiOptions
+        )
             .then((response) => response.json())
             .then((response) => {
                 return {
                     options: response.data.map((city) => {
                         return {
-                            value: `${city.latitude} ${city.longitude}`,
+                            value: `${city.latitude}, ${city.longitude}`,
                             label: `${city.name}, ${city.countryCode}`,
                         };
                     }),
                 };
             });
-            // .catch(error => console.error(error))
+    };
 
-    }
-
-    const fetchWeatherHandler = (searchData) => {
-
-        setSearch(searchData)
-        onSearchChange(searchData)
-
-    }
-
+    const handleOnChange = (searchData) => {
+        setSearch(searchData);
+        onSearchChange(searchData);
+    };
 
     return (
-        <div>
-            <AsyncPaginate
-                placeholder='Search for city!'
-                debounceTimeout={700}
-                value={search}
-                onChange={fetchWeatherHandler}
-                loadOptions={loadOptions}
-
-            />
-        </div>
+        <AsyncPaginate
+            placeholder="Search for city"
+            debounceTimeout={600}
+            value={search}
+            onChange={handleOnChange}
+            loadOptions={loadOptions}
+        />
     );
 };
 
