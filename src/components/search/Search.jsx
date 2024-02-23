@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {AsyncPaginate} from "react-select-async-paginate";
+import {GEO_API_URL, geoApiOptions} from "../../api.js";
 
 const Search = ({onSearchChange}) => {
 
@@ -7,6 +8,18 @@ const Search = ({onSearchChange}) => {
     const [search, setSearch] = useState(null)
 
     const loadOptions = inputValue => {
+
+        // try {
+        //     const response = await fetch(GEO_API_URL, geoApiOptions);
+        //     const result = await response.text();
+        //     console.log(result);
+        // } catch (error) {
+        //     console.error(error);
+        // }
+        fetch(GEO_API_URL, geoApiOptions)
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(error => console.error(error))
 
     }
 

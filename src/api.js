@@ -7,10 +7,3 @@ export const geoApiOptions= {
     }
 };
 
-try {
-    const response = await fetch(GEO_API_URL, geoApiOptions);
-    const result = await response.text();
-    console.log(result);
-} catch (error) {
-    console.error(error);
-}
