@@ -17,18 +17,29 @@ const Search = ({onSearchChange}) => {
         //     console.error(error);
         // }
         fetch(`${GEO_API_URL}?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
-            .then(response => response.json())
-            .then(response => {
+            // .then(response => response.json())
+            // .then((response) => {
+            //     return {
+            //         options: response.data.map((city) => {
+            //             return {
+            //                 value: `${city.latitude} ${city.longitude}`,
+            //                 label: `${city.name}, ${city.countryCode}`,
+            //             }
+            //         })
+            //     }
+            // })
+            .then((response) => response.json())
+            .then((response) => {
                 return {
-                    options: response.data.map(city => {
+                    options: response.data.map((city) => {
                         return {
                             value: `${city.latitude} ${city.longitude}`,
-                            label: `${city.name}, `
-                        }
-                    })
-                }
-            })
-            .catch(error => console.error(error))
+                            label: `${city.name}, ${city.countryCode}`,
+                        };
+                    }),
+                };
+            });
+            // .catch(error => console.error(error))
 
     }
 
