@@ -16,9 +16,18 @@ const Search = ({onSearchChange}) => {
         // } catch (error) {
         //     console.error(error);
         // }
-        fetch(GEO_API_URL, geoApiOptions)
+        fetch(`${GEO_API_URL}?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOptions)
             .then(response => response.json())
-            .then(response => console.log(response))
+            .then(response => {
+                return {
+                    options: response.data.map(city => {
+                        return {
+                            value: `${city.latitude} ${city.longitude}`,
+                            label: `${city.name}, `
+                        }
+                    })
+                }
+            })
             .catch(error => console.error(error))
 
     }
