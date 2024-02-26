@@ -6,6 +6,9 @@ function App() {
 
     const handleSearchChanges = searchValue => {
         console.log(searchValue);
+        const [latitude, longitude] = searchValue.value.splice(" ")
+        console.log('Latitude: ',latitude)
+        console.log('Longitude: ',longitude)
     }
 
   return (
