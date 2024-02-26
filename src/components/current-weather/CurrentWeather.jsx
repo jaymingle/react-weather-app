@@ -3,8 +3,12 @@ import './CurrentWeather.css'
 
 const CurrentWeather = () => {
     return (
-        <div>
-            <p>Hello World</p>
+        <div className="weather">
+           <div className="top">
+               <p className="city">Belgrade</p>
+               <p className="weather-description">Sunny</p>
+           </div>
+            <img src="../../assets/icons/01d.png" alt="weather" className="weather-icon"/>
         </div>
     );
 };
