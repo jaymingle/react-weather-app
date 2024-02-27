@@ -24,9 +24,10 @@ function App() {
                 const currentResponse = await response[0].json();
                 const forecastResponse = await response[1].json();
 
-                setCurrentWeather(currentResponse)
-                setForecastWeather(forecastResponse)
+                setCurrentWeather({city: searchValue.label ,...currentResponse})
+                setForecastWeather({city: searchValue.label, ...forecastResponse})
             })
+            .then(error => console.log(error))
     }
 
   return (
