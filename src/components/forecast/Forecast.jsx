@@ -3,7 +3,7 @@ import React from 'react';
 const Forecast = () => {
     return (
         <div>
-            <p>I am the Forecast</p>
+            <label className="title">Daily</label>
         </div>
     );
 };
