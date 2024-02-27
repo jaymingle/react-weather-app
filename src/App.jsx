@@ -13,8 +13,6 @@ function App() {
     const handleSearchChanges = searchValue => {
         console.log(searchValue);
         const [latitude, longitude] = searchValue.value.split(" ")
-        console.log('Latitude: ',latitude)
-        console.log('Longitude: ',longitude)
 
 
         const currentWeatherFetch = fetch(`${WEATHER_API_URL}/weather?lat=${latitude}&lon=${longitude}&appid=${WEATHER_API_KEY}&units=metric`)
@@ -31,7 +29,7 @@ function App() {
             .then(error => console.log(error))
     }
 
-    console.log(currentWeather)
+    // console.log(currentWeather)
     console.log(forecastWeather)
 
   return (
