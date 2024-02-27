@@ -35,7 +35,9 @@ const Forecast = ({data}) => {
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel></AccordionItemPanel>
+                        <AccordionItemPanel>
+
+                        </AccordionItemPanel>
                     </AccordionItem>
 
                 ))}
