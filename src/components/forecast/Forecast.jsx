@@ -27,7 +27,8 @@ const Forecast = ({data}) => {
                             <AccordionItemButton>
                                 <div className="daily-item">
                                     <img src={`icons/${item.weather[0].icon}.png`} alt="weather" className="icon-small"/>
-                                    <label className="day"></label>
+                                    <label className="day">{forecastDays[idx]}</label>
+                                    <label className="description">{item.weather[0].description}</label>
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
