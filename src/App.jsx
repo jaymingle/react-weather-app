@@ -11,7 +11,6 @@ function App() {
 
 
     const handleSearchChanges = searchValue => {
-        console.log(searchValue);
         const [latitude, longitude] = searchValue.value.split(" ")
 
 
