@@ -38,28 +38,28 @@ const Forecast = ({data}) => {
                         <AccordionItemPanel>
                             <div className="daily-details-grid">
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Pressure</label>
-                                    <label className="pressure-data">{item.main.pressure} hPa</label>
+                                    <label className="daily-label">Pressure</label>
+                                    <label className="daily-data">{item.main.pressure} hPa</label>
                                 </div>
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Humidity</label>
-                                    <label className="pressure-data">{item.main.humidity}%</label>
+                                    <label className="daily-label">Humidity</label>
+                                    <label className="daily-data">{item.main.humidity}%</label>
                                 </div>
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Clouds</label>
-                                    <label className="pressure-data">{item.clouds.all}%</label>
+                                    <label className="daily-label">Clouds</label>
+                                    <label className="daily-data">{item.clouds.all}%</label>
                                 </div>
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Wind Speed</label>
-                                    <label className="pressure-data">{item.wind.speed} m/s</label>
+                                    <label className="daily-label">Wind Speed</label>
+                                    <label className="daily-data">{item.wind.speed} m/s</label>
                                 </div>
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Sea Level</label>
-                                    <label className="pressure-data">{item.main.sea_level} m</label>
+                                    <label className="daily-label">Sea Level</label>
+                                    <label className="daily-data">{item.main.sea_level} m</label>
                                 </div>
                                 <div className="daily-details-grid-item">
-                                    <label className="pressure-label">Feels like</label>
-                                    <label className="pressure-data">{Math.round(item.main.feels_like)} °C</label>
+                                    <label className="daily-label">Feels like</label>
+                                    <label className="daily-data">{Math.round(item.main.feels_like)} °C</label>
                                 </div>
                             </div>
                         </AccordionItemPanel>
