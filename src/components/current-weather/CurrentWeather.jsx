@@ -12,7 +12,7 @@ const CurrentWeather = ({data}) => {
                <img src={`icons/${data.weather[0].icon}.png`} alt="weather" className="weather-icon"/>
            </div>
             <div className="bottom">
-                <p className="temperature">{data.main.temperature}°C</p>
+                <p className="temperature">{data.main.temp}°C</p>
                 <div className="details">
                     <div className="parameter-row">
                         <span className="parameter-label parameter-label-top">Details</span>
