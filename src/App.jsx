@@ -11,6 +11,7 @@ function App() {
         console.log('Longitude: ',longitude)
 
 
+        const currentWeatherFetch = fetch(`/weather?lat={lat}&lon={lon}&appid={API key}`)
     }
 
   return (
