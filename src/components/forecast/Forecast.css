@@ -16,11 +16,12 @@
 }
 
 .icon-small{
-
+    width: 40px;
 }
 
 .day{
-
+    color: #212121;
+    flex: 1 1;
 }
 
 .description{
