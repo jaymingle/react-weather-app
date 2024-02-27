@@ -1,12 +1,12 @@
 import React from 'react';
 import './CurrentWeather.css'
 
-const CurrentWeather = () => {
+const CurrentWeather = ({data}) => {
     return (
         <div className="weather">
            <div className="top">
                <div>
-                   <p className="city">Belgrade</p>
+                   <p className="city">{data.city}</p>
                    <p className="weather-description">Sunny</p>
                </div>
                <img src="icons/01d.png" alt="weather" className="weather-icon"/>
