@@ -55,9 +55,10 @@
 }
 
 .daily-label{
-
+    font-weight: 600;
+    color: #212121;
 }
 
 .daily-data{
-
+    color: #757575;
 }
